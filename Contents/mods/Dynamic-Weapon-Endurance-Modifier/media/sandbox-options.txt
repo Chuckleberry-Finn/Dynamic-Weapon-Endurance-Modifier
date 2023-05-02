@@ -10,4 +10,4 @@ option DynamicEnduranceMod.ResultMax
 {type = double, min = 0.01, max = 100, default = 4, page = DynamicEnduranceMod, translation = DynamicEnduranceMod_ResultMax,}
 
 option DynamicEnduranceMod.Exceptions
-{type = string, default =  , page = DynamicEnduranceMod, translation = DynamicEnduranceMod_Exceptions,}
+{type = string, default = Katana:0.6; , page = DynamicEnduranceMod, translation = DynamicEnduranceMod_Exceptions,}
