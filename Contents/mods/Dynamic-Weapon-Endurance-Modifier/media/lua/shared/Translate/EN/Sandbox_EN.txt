@@ -4,10 +4,10 @@ Sandbox_EN = {
 	Sandbox_DynamicEnduranceMod_EnduranceMod = "Endurance Modifier",
 
     Sandbox_DynamicEnduranceMod_ResultMin = "Endurance Mod Minimum"
-    Sandbox_DynamicEnduranceMod_Exceptions_tooltip = "Lowest possible endurance modifier."
+    Sandbox_DynamicEnduranceMod_ResultMin_tooltip = "Lowest possible endurance modifier."
 
     Sandbox_DynamicEnduranceMod_ResultMax = "Endurance Mod Maximum"
-    Sandbox_DynamicEnduranceMod_Exceptions_tooltip = "Highest possible endurance modifier."
+    Sandbox_DynamicEnduranceMod_ResultMax_tooltip = "Highest possible endurance modifier."
 
     Sandbox_DynamicEnduranceMod_Exceptions = "Exceptions",
     Sandbox_DynamicEnduranceMod_Exceptions_tooltip = "FORMAT: (Where default is 0.74)\nItemType:0.80; ItemType:0.9; Category:1;",
