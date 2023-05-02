@@ -8,17 +8,11 @@
 --         if (var9 <= 0 && !var1.isForceShove()) {
 --            float var12 = (var2.getWeight() * 0.18F * var2.getFatigueMod(var1) * var1.getFatigueMod() * var2.getEnduranceMod() * 0.3F + var11) * 0.04F;
 --            float var13 = 1.0F;
---            if (var1.Traits.Asthmatic.isSet()) {
---               var13 = 1.3F;
---            }
---
+--            if (var1.Traits.Asthmatic.isSet()) { var13 = 1.3F; }
 --            var10000 = var1.getStats();
 --            var10000.endurance -= var12 * var13;
 --         }
 --      }
-
---DynamicEnduranceMod_Exceptions
---DynamicEnduranceMod_EnduranceMod
 
 local function modifyWeaponsEnduranceMod()
     local SM = getScriptManager()
