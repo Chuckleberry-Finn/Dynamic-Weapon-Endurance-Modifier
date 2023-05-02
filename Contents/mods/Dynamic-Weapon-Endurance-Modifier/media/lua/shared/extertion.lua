@@ -44,6 +44,7 @@ local function modifyWeaponsEnduranceMod()
 
             local itemType = itemScript:getName()
             local itemModuleDotType = itemScript:getFullName() -- module.Type
+            local itemDisplayCategory = itemScript:getDisplayCategory()
 
             local itemWeaponWeight = itemScript:getActualWeight()
             local itemEnduranceMod = itemScript:getEnduranceMod()
@@ -52,7 +53,7 @@ local function modifyWeaponsEnduranceMod()
             local endMin = SandboxVars.DynamicEnduranceMod.ResultMin
             local endMax = SandboxVars.DynamicEnduranceMod.ResultMax
 
-            local itemEndModOverwrite = enduranceModOverwrites[itemModuleDotType] or enduranceModOverwrites[itemType] or nil
+            local itemEndModOverwrite = enduranceModOverwrites[itemModuleDotType] or enduranceModOverwrites[itemType] or enduranceModOverwrites[itemDisplayCategory] or nil
             local itemNewEnduranceMod = itemEndModOverwrite or math.min(endMax, math.max(endMin, itemWeaponWeight * enduranceMod))
 
             if getDebug() then
