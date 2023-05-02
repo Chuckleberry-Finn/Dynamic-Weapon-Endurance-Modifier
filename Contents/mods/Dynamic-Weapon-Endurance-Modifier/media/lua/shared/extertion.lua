@@ -25,6 +25,16 @@ local function modifyWeaponsEnduranceMod()
     local allItems = SM:getAllItems()
     local weaponsText = ""
 
+    local enduranceModOverwrites = {}
+
+    local exceptions = SandboxVars.DynamicEnduranceMod.Exceptions
+    for roleColor in string.gmatch(exceptions, "([^;]+)") do
+        local itemType,endMod = string.match(roleColor, "(.*):(.*)")
+        if itemType and endMod then
+            enduranceModOverwrites[itemType] = endMod
+        end
+    end
+
     --string.find(subject string, pattern string,
     for i=0, allItems:size()-1 do
         ---@type Item
@@ -32,8 +42,9 @@ local function modifyWeaponsEnduranceMod()
         local scriptType = itemScript:getTypeString()
         if scriptType == "Weapon" then
 
-            local displayName = itemScript:getDisplayName()
-            --local itemModuleDotType = itemScript:getFullName() -- module.Type
+            local itemType = itemScript:getName()
+            local itemModuleDotType = itemScript:getFullName() -- module.Type
+
             local itemWeaponWeight = itemScript:getActualWeight()
             local itemEnduranceMod = itemScript:getEnduranceMod()
 
@@ -41,9 +52,17 @@ local function modifyWeaponsEnduranceMod()
             local endMin = SandboxVars.DynamicEnduranceMod.ResultMin
             local endMax = SandboxVars.DynamicEnduranceMod.ResultMax
 
-            local itemNewEnduranceMod = math.min(endMax, math.max(endMin, itemWeaponWeight * enduranceMod))
+            local itemEndModOverwrite = enduranceModOverwrites[itemModuleDotType] or enduranceModOverwrites[itemType] or nil
+            local itemNewEnduranceMod = itemEndModOverwrite or math.min(endMax, math.max(endMin, itemWeaponWeight * enduranceMod))
 
-            if getDebug() then weaponsText = weaponsText..displayName.."	 w:"..round(itemWeaponWeight, 1).."	 old_e:"..round(itemEnduranceMod, 1).."	 new_e:"..round(itemNewEnduranceMod, 1).. ", \n" end
+            if getDebug() then
+                local eText = (itemEndModOverwrite and "overwrite_e") or "new_e"
+                weaponsText = weaponsText..itemType..
+                        "	 w:"..round(itemWeaponWeight, 1)..
+                        "	 old_e:"..round(itemEnduranceMod, 1)..
+                        "	 "..eText..":"..round(itemNewEnduranceMod, 1)..
+                        ", \n"
+            end
         end
     end
 
