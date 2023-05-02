@@ -1,0 +1,13 @@
+VERSION = 1,
+
+option DynamicEnduranceMod.EnduranceMod
+{type = double, min = 0.01, max = 100, default = 0.74, page = DynamicEnduranceMod, translation = DynamicEnduranceMod_EnduranceMod,}
+
+option DynamicEnduranceMod.ResultMin
+{type = double, min = 0.01, max = 100, default = 0.5, page = DynamicEnduranceMod, translation = DynamicEnduranceMod_ResultMin,}
+
+option DynamicEnduranceMod.ResultMax
+{type = double, min = 0.01, max = 100, default = 4, page = DynamicEnduranceMod, translation = DynamicEnduranceMod_ResultMax,}
+
+option DynamicEnduranceMod.Exceptions
+{type = string, default =  , page = DynamicEnduranceMod, translation = DynamicEnduranceMod_Exceptions,}
