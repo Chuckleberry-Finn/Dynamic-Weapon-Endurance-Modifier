@@ -47,7 +47,7 @@ local function modifyWeaponsEnduranceMod()
         end
     end
 
-    if getDebug() then print("Weapons with non-1 itemEnduranceMod:\n"..weaponsText) end
+    if getDebug() then print("Dynamic Weapon Endurance Mod:\n"..weaponsText) end
 end
 
 Events.OnLoad.Add(modifyWeaponsEnduranceMod)
