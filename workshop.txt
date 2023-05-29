@@ -1,25 +1,19 @@
 version=1
 id=2970229240
 title=Dynamic-Weapon-Endurance-Modifier
-description=[h1] Dynamic-Weapon-Endurance-Modifier by Chuckleberry Finn [/h1]
-description=Applies a dynamic endurance modifier based on weapon's weight using a sandbox option.
-description=Additional sandbox options to create exceptions and other features.
+description=[h2]Applies a dynamic endurance modifier based on weapon's weight.
+description=Additional sandbox options to create exceptions and other features.[/h2]
+description=[h3]Commissioned by [b]AWildCoki[/b][/h3]
+description=
 description=
 description=[url=https://ko-fi.com/chuckleberryfinn][img]https://i.imgur.com/GxZ38nz.png[/img] [b]Consider supporting Chuck![/b][/url] [url=https://www.patreon.com/bePatron?u=17239488][img]https://raw.githubusercontent.com/ChuckTheSheep/Vanilla-Weapons-Expanded/main/Contents/mods/VanillaWeaponsExpanded/patreon/Patreon%20Logo.png[/img][/url]
 description=
 description=
 description=
-description=
-description=
-description=[quote=author]
-description=[b]Chuckleberry Finn[/b]
-description=Commissioned by
-description=[b]AWildCoki[/b]
-description=[/quote]
-description=
-description=[h1]Hire Team Orbit for Custom Mod Commission[/h1]
 description=[url= https://discord.gg/2skchrKrDv ][img]https://raw.githubusercontent.com/Glytch3r/TeamOrbitAds/main/square_serve.gif[/img][/url]
-description=[h1]Click the banners[/h1]
-description=[url= https://steamcommunity.com/sharedfiles/filedetails/?id=2963097079 ][img]https://raw.githubusercontent.com/Glytch3r/TeamOrbitAds/main/workshop.png[/img][/url]
+description=[url= https://steamcommunity.com/sharedfiles/filedetails/?id=2963097079][img]https://raw.githubusercontent.com/Glytch3r/TeamOrbitAds/main/workshop.png[/img][/url]
+description=
+description=
+description=
 tags=Build 41;Items;Misc;Weapons
 visibility=unlisted
